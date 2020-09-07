@@ -7,6 +7,11 @@ Login page
 
 {% block content %}
 <h2>Login page</h2>
+<form method="POST" action="">
+{% csrf_token %}
+{{ form | crispy }}
+<input type="submit" value="login" />
+</form>
 {% endblock content %}
 
 
