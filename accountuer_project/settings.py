@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'accounts.apps.AccountsConfig',
+    'home.apps.HomeConfig',
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -131,3 +132,5 @@ LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
